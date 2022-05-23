@@ -1,13 +1,24 @@
-import { Component } from "react";
-import File from "./components/File";
+import { Component } from 'react';
+import './App.css'
+import Header from './components/Header';
+import Team from './components/Team';
+
+
 
 class App extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      answer: 'Yes'
+    }
+  }
+
   render() {
     return (
-      <div>
-        <File name="Ammar" name2="Hasan" />
-        <File name="Alaa" name2="Balkees" />
-        <File name="Manar" name2="Hasan" />
+      <div className='container'>
+        <Header />
+        <Team />
       </div>
     );
   }
