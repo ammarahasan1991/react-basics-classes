@@ -10,8 +10,19 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      answer: 'Yes'
+      number: 0
     }
+
+    this.clickHandler = this.clickHandler.bind(this);
+  }
+
+
+  clickHandler() {
+    this.setState(prevState => {
+      return {
+        number: prevState.number + 1
+      };
+    });
   }
 
   render() {
@@ -19,6 +30,10 @@ class App extends Component {
       <div className='container'>
         <Header />
         <Team />
+
+        <h3>{this.state.number}</h3>
+
+        <button className='btn-primary' onClick={this.clickHandler}>Click me</button>
       </div>
     );
   }
