@@ -47,7 +47,9 @@ class Team extends Component {
     render() {
         return (
             <div className="row" >
-                <button className="btn btn-primary btn-lg btn-block" onClick={this.clickEvent}>Dispaly new</button>
+                <div className="col-md-12">
+                    <button className="btn btn-primary btn-lg btn-block" onClick={this.clickEvent}>Dispaly new</button>
+                </div>
                 {this.mapping(this.state.members)}
             </div>
         );
